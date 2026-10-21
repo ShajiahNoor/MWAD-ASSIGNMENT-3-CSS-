@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Cascading Style Sheets | Mdn</title>
+    <!-- ///////////////////fontawesome link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- /////////////////// css link -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+</head>
+<body>
+
+    <div class="announcement">
+        Learn frontend, backend, and AI from our course partner
+        <a href="#tutorials"
+        >Scrimba</a>
+    </div>
+
+    <header class="topbar">
+        <a href="#top" class="brand">MDN</a>
+        <nav>
+            <a href="#tutorials">References</a>
+            <a href="#guides">Guides</a>
+            <a href="#tools">Tools</a>
+            <a href="#see-also">About</a>
+        </nav>
+        <a href="#footer" class="theme-link">Theme</a>
+    </header>
+
+    
+<!-- /////////////////////////Mobile-sidebar menuss -->
+<div class="mobile-menus">
+
+    <details class="mobile-menu left-menu">
+        <summary aria-label="Open CSS navigation">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </summary>
+
+        <div class="menu-panel">
+            <strong>CSS Navigation</strong>
+
+            <details open>
+                <summary>CSS</summary>
+                <a href="#overview">CSS: Cascading Style Sheets</a>
+                <a href="#tutorials">Beginner's tutorials</a>
+                <a href="#guides">Guides</a>
+                <a href="#how-to">How to</a>
+                <a href="#tools">Tools</a>
+                <a href="#reference">Reference</a>
+            </details>
+
+            <details>
+                <summary>CSS guides</summary>
+                <a href="#guides">CSS syntax</a>
+                <a href="#guides">Cascade and inheritance</a>
+                <a href="#guides">Selectors</a>
+                <a href="#guides">Box model</a>
+                <a href="#guides">Positioning</a>
+                <a href="#guides">Flexbox</a>
+                <a href="#guides">Grid layout</a>
+                <a href="#guides">Media queries</a>
+            </details>
+
+            <details>
+                <summary>Tools</summary>
+                <a href="#tools">Color picker</a>
+                <a href="#tools">Gradient generator</a>
+                <a href="#tools">Box shadow generator</a>
+                <a href="#tools">Border radius</a>
+            </details>
+
+            <details>
+                <summary>Reference</summary>
+                <a href="#reference">Properties</a>
+                <a href="#reference">At-rules</a>
+                <a href="#reference">Selectors</a>
+                <a href="#reference">Functions</a>
+                <a href="#reference">Data types</a>
+            </details>
+        </div>
+    </details>
+
+    <span class="mobile-title">CSS Reference</span>
+
+    <details class="mobile-menu right-menu">
+        <summary aria-label="Open article contents">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </summary>
+
+        <div class="menu-panel">
+            <strong>In this article</strong>
+            <a href="#overview">CSS: Cascading Style Sheets</a>
+            <a href="#tutorials">Beginner's tutorials</a>
+            <a href="#guides">Guides</a>
+            <a href="#how-to">How to</a>
+            <a href="#tools">Tools</a>
+            <a href="#reference">Reference</a>
+            <a href="#see-also">See also</a>
+        </div>
+    </details>
+
+</div>
+
+
+
+    <div class="page" id="top">
+
+        <!--/////////////////////////LEFT SIDEBAR -->
+        <aside  class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-search">
+                <input type="search" placeholder="Filter" aria-label="Filter topics">
+                <span>⌕</span>
+            </div>
+
+            <details open>
+                <summary>CSS</summary>
+                <a href="#top">CSS: Cascading Style Sheets</a>
+                <a href="#tutorials">Beginner's tutorials</a>
+                <a href="#guides">Guides</a>
+                <a href="#how-to">How to</a>
+                <a href="#tools">Tools</a>
+                <a href="#reference">Reference</a>
+            </details>
+
+            <details open>
+                <summary>CSS guides</summary>
+                <a href="#guides">CSS syntax</a>
+                <a href="#guides">Cascade and inheritance</a>
+                <a href="#guides">Selectors</a>
+                <a href="#guides">Box model</a>
+                <a href="#guides">Positioning</a>
+                <a href="#guides">Flexbox</a>
+                <a href="#guides">Grid layout</a>
+                <a href="#guides">Media queries</a>
+                <a href="#guides">Colors</a>
+                <a href="#guides">Fonts and text</a>
+                <a href="#guides">Transitions</a>
+                <a href="#guides">Animations</a>
+            </details>
+
+            <details open>
+                <summary>Tools</summary>
+                <a href="#tools">Color picker</a>
+                <a href="#tools">Gradient generator</a>
+                <a href="#tools">Box shadow generator</a>
+                <a href="#tools">Border radius</a>
+            </details>
+
+            <details open>
+                <summary>Reference</summary>
+                <a href="#reference">Properties</a>
+                <a href="#reference">At-rules</a>
+                <a href="#reference">Selectors</a>
+                <a href="#reference">Functions</a>
+                <a href="#reference">Data types</a>
+                <a href="#reference">Pseudo-classes</a>
+                <a href="#reference">Pseudo-elements</a>
+            </details>
+        </aside>
+
+        <!--////////////////////////////// main content-->
+        <main class="article">
+
+            <section id="overview">
+                <h1>CSS: Cascading Style Sheets</h1>
+
+                <p><strong>Cascading Style Sheets (CSS)</strong> is a stylesheet language used to describe the presentation of a document written in <a href="#tutorials" class="tip" data-tip="HTML structures web page content">HTML</a> or XML, including formats such as SVG, MathML, and XHTML. CSS describes how elements should appear on screens, on paper, and on other media.</p>
+
+                <p>CSS is one of the core languages of the <strong>open web</strong> and is standardized across web browsers. Earlier versions included CSS1 and CSS2.1. Modern CSS is developed through separate modules, each of which can progress and receive updates independently.</p>
+
+                <p>As CSS expanded, different parts of its specification began developing at different speeds. It therefore became more practical to publish recommendations for individual modules. The specification continues to evolve, and modules may have their own version numbers, such as CSS Color Module Level 5.</p>
+            </section>
+
+            <section id="tutorials">
+                <h2>Beginner's tutorials</h2>
+                <p>Our <a href="#guides">learn web development core modules</a> contain tutorials covering the fundamentals of CSS.</p>
+
+                <div class="tutorial">
+                    <a href="#guides" class="tip" data-tip="An introduction to styling page content">Your first website: Styling the content</a>
+                    <p>This article introduces CSS and explains how to use it, especially for people who are new to web development.</p>
+                </div>
+
+                <div class="tutorial">
+                    <a href="#guides" class="tip" data-tip="Learn the foundations of CSS">CSS styling basics</a>
+                    <p>Learn the CSS fundamentals needed to get started, including syntax, selectors, declarations, and common techniques.</p>
+                </div>
+
+                <div class="tutorial">
+                    <a href="#guides" class="tip" data-tip="Explore fonts, spacing, and text appearance">CSS text styling</a>
+                    <p>Learn about font families, font weight, italics, line spacing, letter spacing, text shadows, custom fonts, lists, and links.</p>
+                </div>
+
+                <div class="tutorial">
+                    <a href="#guides" class="tip" data-tip="Explore page layout techniques">CSS layout</a>
+                    <p>Explore floats, positioning, modern layout tools, and responsive designs that adapt to different devices and screen sizes.</p>
+                </div>
+            </section>
+
+            <section id="guides">
+                <h2>Guides</h2>
+                <p>CSS guides are organized by topic to help you learn what you can achieve using CSS. Common topics include:</p>
+
+                <ul>
+                    <li><a href="#reference">CSS syntax</a>, including declarations and rulesets.</li>
+                    <li><a href="#reference">Specificity, inheritance, and cascade</a></li>
+                    <li><a href="#reference">Nesting, scoping, and shadow parts</a></li>
+                    <li><a href="#reference">Media and container queries</a></li>
+                    <li><a href="#reference">Numeric and textual data types</a></li>
+                    <li><a href="#reference">Box model and margin collapse</a></li>
+                    <li><a href="#reference">Containing block</a></li>
+                    <li><a href="#reference">Stacking and block-formatting contexts</a></li>
+                    <li><a href="#reference">Property value processing</a></li>
+                    <li><a href="#reference">Shorthand properties</a></li>
+                    <li><a href="#reference">Flexible box, multi-column, and grid layouts</a></li>
+                    <li><a href="#reference">Animations, transitions, and transforms</a></li>
+                </ul>
+            </section>
+
+            <section id="how-to">
+                <h2>How to</h2>
+                <div class="tutorial">
+                    <a href="#tools">CSS layout cookbook</a>
+                    <p>Practical examples for common layout patterns, including flexible columns, centered content, and responsive page structures.</p>
+                </div>
+            </section>
+
+            <section id="tools">
+                <h2>Tools</h2>
+
+                <div class="tool-item">
+                    <a href="#reference">Color picker</a>
+                    <p>Choose a color and preview its hexadecimal and RGB values.</p>
+                </div>
+
+                <div class="tool-item">
+                    <a href="#reference">Gradient generator</a>
+                    <p>Explore color combinations for linear and radial gradients.</p>
+                </div>
+
+                <div class="tool-item">
+                    <a href="#reference">Box shadow generator</a>
+                    <p>Experiment with shadow offsets, blur, spread, and opacity.</p>
+                </div>
+
+                <div class="tool-item">
+                    <a href="#reference">Border radius generator</a>
+                    <p>Adjust corner radius values to create rounded elements.</p>
+                </div>
+
+                <div class="tool-item">
+                    <a href="#reference">Flexbox layout</a>
+                    <p>Learn how flexible containers arrange items in rows and columns.</p>
+                </div>
+
+                <div class="tool-item">
+                    <a href="#reference">Grid layout</a>
+                    <p>Explore two-dimensional layouts with rows and columns.</p>
+                </div>
+
+                <div class="tool-item">
+                    <a href="#reference">Responsive design</a>
+                    <p>Use flexible sizing and media queries to adapt layouts to different screens.</p>
+                </div>
+            </section>
+
+            <section id="reference">
+                <h2>Reference</h2>
+                <p>Browse CSS properties, selectors, functions, and other language features.</p>
+
+                <div class="reference-item">
+                    <a href="#top">CSS properties</a>
+                    <p>Properties control the appearance and layout of elements.</p>
+                </div>
+
+                <div class="reference-item">
+                    <a href="#top">CSS at-rules</a>
+                    <p>Rules that define instructions such as media queries and imported styles.</p>
+                </div>
+
+                <div class="reference-item">
+                    <a href="#top">CSS selectors</a>
+                    <p>Patterns used to select elements that CSS rules will style.</p>
+                </div>
+
+                <div class="reference-item">
+                    <a href="#top">CSS functions</a>
+                    <p>Functions provide values for colors, calculations, transformations, and more.</p>
+                </div>
+
+                <div class="reference-item">
+                    <a href="#top">CSS data types</a>
+                    <p>Learn about lengths, percentages, colors, numbers, and other values.</p>
+                </div>
+            </section>
+
+            <section id="see-also">
+                <h2>See also</h2>
+                <ul>
+                    <li><a href="#tutorials">Web languages</a> used to create websites.</li>
+                    <li><a href="#guides">HTML and CSS</a> working together.</li>
+                    <li><a href="#tools">Responsive web design</a> concepts.</li>
+                </ul>
+            </section>
+
+            <section class="help-box">
+                <h2>Help improve MDN</h2>
+                <p>Was this page helpful to you?</p>
+                <div class="feedback">
+                    <a href="#top">Yes</a>
+                    <a href="#top">No</a>
+                </div>
+                <p>Learn how to contribute to documentation and help make web development easier to learn.</p>
+                <a href="#top">Read the contribution guide</a>
+            </section>
+
+        </main>
+
+        <!--///////////////////// right sidebar/////////-->
+        <aside class="right-sidebar" id="rightSidebar">
+            <h3>In this article</h3>
+            <a href="#overview">CSS: Cascading Style Sheets</a>
+            <a href="#tutorials">Beginner's tutorials</a>
+            <a href="#guides">Guides</a>
+            <a href="#how-to">How to</a>
+            <a href="#tools">Tools</a>
+            <a href="#reference">Reference</a>
+            <a href="#see-also">See also</a>
+        </aside>
+
+    </div>
+
+    <!--//////////////////////////// BLUE BANNER -->
+    <div class="blue-banner">
+        <div class="banner-inner">
+            <strong>◈ Web Docs</strong>
+            <span>Build faster.</span>
+        </div>
+    </div>
+
+    <!--//////////////////////////////// FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-grid">
+            <div class="footer-intro">
+                <h3>MDN</h3>
+                <p>Your blueprint for a better internet.</p>
+                <div class="social-links">
+                    <a href="#footer">X</a>
+                    <a href="#footer">GitHub</a>
+                    <a href="#footer">Community</a>
+                </div>
+            </div>
+
+            <div>
+                <h4>MDN</h4>
+                <a href="#top">About</a>
+                <a href="#top">Blog</a>
+                <a href="#top">Careers</a>
+                <a href="#top">Advertise</a>
+            </div>
+
+            <div>
+                <h4>Support</h4>
+                <a href="#top">Help</a>
+                <a href="#top">Contribute</a>
+                <a href="#top">Report an issue</a>
+            </div>
+
+            <div>
+                <h4>Developers</h4>
+                <a href="#tutorials">Web technology</a>
+                <a href="#guides">Learn web development</a>
+                <a href="#reference">Reference</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>Web Docs</span>
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Cookies</span>
+        </div>
+    </footer>
+
+</body>
+</html>
